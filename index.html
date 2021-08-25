@@ -10,7 +10,6 @@
     <script src="https://kit.fontawesome.com/1abd1e7e05.js" crossorigin="anonymous"></script>
 
     <style>
-       
         .btn1 {
             background-color: #457b9d;
             border-radius: 50%;
@@ -114,41 +113,48 @@
                     Total Cost
                 </div>
 
-                <div class="col-3">
-                    <button class="btn1"><i class="fas fa-plus-circle"></i></button> <br>
-                    <button class="btn1"><i class="fas fa-plus-circle"></i></button> <br>
-                    <button class="btn1"><i class="fas fa-plus-circle"></i></button>
-
+                <div class="col-2">
+                    <button class="btn1 addBtn1"><i class="fas fa-plus-circle"></i></button> <br>
+                    <button class="btn1 addBtn2"><i class="fas fa-plus-circle"></i></button> <br>
+                    <button class="btn1 addBtn3"><i class="fas fa-plus-circle"></i></button>
                 </div>
 
-                <div class="col-3">
-                    <button class="btn1"><i class="fas fa-minus-circle"></i></button> <br>
-                    <button class="btn1"><i class="fas fa-minus-circle"></i></button> <br>
-                    <button class="btn1"><i class="fas fa-minus-circle"></i></button>
+                <div class="col-2">
+                    <span class="smallQty">0</span> <br>
+                    <span class="mediumQty">0</span> <br>
+                    <span class="largeQty">0</span>
+                </div>
+
+                <div class="col-2">
+                    <button class="btn1 subBtn1"><i class="fas fa-minus-circle"></i></button> <br>
+                    <button class="btn1 subBtn2"><i class="fas fa-minus-circle"></i></button> <br>
+                    <button class="btn1 subBtn3"><i class="fas fa-minus-circle"></i></button>
                 </div>
 
                 <div class="col-3 center">
-                    R49.00 <br>
-                    R89.00 <br>
-                    R129.00 <br> <br>
-                    R200.00
+                    <span>R<span class="totalsmallPizza">0.00</span> </span> <br>
+                    <span>R<span class="totalMediumPizza">0.00</span> </span> <br>
+                    <span>R<span class="totalLargePizza">0.00</span> </span> <br> <br>
+                    <span>R<span class="cartTotal">0.00</span> </span> 
                 </div>
 
+                
+
 
             </div>
 
             <div>
-                <button class="btn2">Checkout</button>
+                <button class="btn2 checkout hidden">Checkout</button>
             </div>
 
-            <div>Message goes here</div>
+            <div class= "hidden message">Message goes here</div>
             <br>
             <div>
-                Payment amount: <input type="text">
+                Payment amount: <input type="number" class="paymentAmount">
             </div>
             <br>
             <div>
-                <button class="btn2">Pay</button>
+                <button class="btn2 payBtn">Pay</button>
             </div>
         </div>
 
@@ -164,16 +170,13 @@
                 <h2>Small Pizza</h2>
                 <img src="pizzavector.png" width="150">
 
-                <h3>
-                    R49.00
-                </h3>
+                <h3>R<span class="smallPizzaPrice">49.00</span> </h3>
                 <div>
-                    With three toppings on all flavors. <br>
-                    Add extra cheese for R10.
+                    Small Pizza with 3 toppings. 1 meat topping. 3 or less other toppings.
                 </div>
-                <br>
+                <br> <br>
                 <div>
-                    <button class="btn2">Buy</button>
+                    <button class="btn2 orderBtnSmall">Buy</button>
                 </div>
                 <br>
             </div>
@@ -182,17 +185,15 @@
                 <h2>Medium Pizza</h2>
                 <img src="pizzavector.png" width="150">
 
-                <h3>
-                    R89.00
-                </h3>
+                <h3>R<span class="mediumPizzaPrice">89.00</span> </h3>
                 <div>
-                    With three toppings on all flavors. <br>
-                    Add extra cheese for R15.
+                    Medium Margeritha Pizza with 3 toppings max. 2 or less meat toppings. 3 or less other toppings.
+
                 </div>
 
                 <br>
                 <div>
-                    <button class="btn2">Buy</button>
+                    <button class="btn2 orderBtnMedium">Buy</button>
                 </div>
                 <br>
             </div>
@@ -200,16 +201,15 @@
             <div class="col-4 center large_pizza box_model">
                 <h2>Large Pizza</h2>
                 <img src="pizzavector.png" width="150">
-                <h3>
-                    R129.00
-                </h3>
+
+                <h3>R<span class="largePizzaPrice">129.00</span> </h3>
+
                 <div>
-                    With three toppings on all flavors. <br>
-                    Add extra cheese for R20.
+                    Large Margeritha Pizza with 3 toppings max. 3 meat toppings max. 3 or less other toppings.
                 </div>
                 <br>
                 <div>
-                    <button class="btn2">Buy</button>
+                    <button class="btn2 orderBtnLarge">Buy</button>
                 </div>
                 <br>
             </div>
@@ -240,6 +240,7 @@
             Dough Road <br>
             Base Town
         </div>
+        <script src="algorithm.js"></script>
     </div>
 </body>
 
