@@ -63,6 +63,7 @@
         .shopping_cart {
             background-color: #457b9d;
             height: 25em;
+            /* display: flex; */
             margin: 1em;
         }
 
@@ -83,6 +84,10 @@
             padding: 0em;*/
             display: inline;
             float: right;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .fa-instagram {
@@ -132,7 +137,7 @@
                 </div>
 
                 <div class="col-3 center">
-                    <span>R<span class="totalsmallPizza">0.00</span> </span> <br>
+                    <span>R<span class="totalSmallPizza">0.00</span> </span> <br>
                     <span>R<span class="totalMediumPizza">0.00</span> </span> <br>
                     <span>R<span class="totalLargePizza">0.00</span> </span> <br> <br>
                     <span>R<span class="cartTotal">0.00</span> </span> 
@@ -149,13 +154,15 @@
 
             <div class= "hidden message">Message goes here</div>
             <br>
-            <div>
-                Payment amount: <input type="number" class="paymentAmount">
-            </div>
-            <br>
-            <div>
-                <button class="btn2 payBtn">Pay</button>
-            </div>
+            <div class = "hidden payAmount">
+                <div>
+                    Payment amount: <input type="number" class="paymentAmount">
+                </div>
+                <br>
+                <div>
+                    <button class="btn2 payBtn">Pay</button>
+                </div>
+            </div>      
         </div>
 
 
